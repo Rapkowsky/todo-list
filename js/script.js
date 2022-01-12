@@ -33,6 +33,7 @@ const prepareDomeEvents = () => {
 	ulList.addEventListener("click", verifyClick);
 	popupCancelButton.addEventListener("click", closePopup);
 	popupAcceptButton.addEventListener("click", changeTaskText);
+	toDoInput.addEventListener("keyup", enterKeyCheck);
 };
 
 const addNewTask = () => {
@@ -111,6 +112,10 @@ const deleteTask = (e) => {
 	}
 };
 
-
+const enterKeyCheck = (e) => {
+	if (e.key === "Enter") {
+		addNewTask();
+	}
+};
 
 document.addEventListener("DOMContentLoaded", main);
