@@ -6,7 +6,7 @@ let newToDoElement;
 
 let popup;
 let popupInfo;
-let toDoEdit;
+let toDoToEdit;
 let popupInput;
 let popupAcceptButton;
 let popupCancelButton;
@@ -74,12 +74,14 @@ const verifyClick = (e) => {
 		e.target.closest("li").classList.toggle("completed");
 		e.target.classList.toggle("completed");
 	} else if (e.target.matches(".edit")) {
-		editTask();
+		editTask(e);
 	} else if (e.target.matches(".delete")) {
 	}
 };
 
-const editTask = () => {
+const editTask = (e) => {
+	toDoToEdit = e.target.closest("li");
+	popupInput.value = toDoToEdit.firstChild.textContent;
 	popup.style.display = "flex";
 };
 
