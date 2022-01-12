@@ -32,6 +32,7 @@ const prepareDomeEvents = () => {
 	addButton.addEventListener("click", addNewTask);
 	ulList.addEventListener("click", verifyClick);
 	popupCancelButton.addEventListener("click", closePopup);
+	popupAcceptButton.addEventListener("click", changeTaskText);
 };
 
 const addNewTask = () => {
@@ -87,6 +88,16 @@ const editTask = (e) => {
 
 const closePopup = () => {
 	popup.style.display = "none";
+	popupInfo.textContent = "";
+};
+
+const changeTaskText = () => {
+	if (popupInput.value !== "") {
+		toDoToEdit.firstChild.textContent = popupInput.value;
+		closePopup();
+	} else {
+		popupInfo.textContent = "Musisz podać jakąś treść!";
+	}
 };
 
 document.addEventListener("DOMContentLoaded", main);
