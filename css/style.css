@@ -190,3 +190,7 @@ h1 {
 	color: #fff;
 	background-color: var(--light-blue);
 }
+
+li {
+	transition: all 0.3s ease;
+}
