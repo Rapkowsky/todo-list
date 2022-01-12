@@ -77,6 +77,7 @@ const verifyClick = (e) => {
 	} else if (e.target.matches(".edit")) {
 		editTask(e);
 	} else if (e.target.matches(".delete")) {
+		deleteTask(e);
 	}
 };
 
@@ -99,5 +100,17 @@ const changeTaskText = () => {
 		popupInfo.textContent = "Musisz podać jakąś treść!";
 	}
 };
+
+const deleteTask = (e) => {
+	e.target.closest("li").remove();
+
+	const allTask = ulList.querySelectorAll("li");
+
+	if (allTask.length === 0) {
+		errorMssg.textContent = "Brak zadań na liście.";
+	}
+};
+
+
 
 document.addEventListener("DOMContentLoaded", main);
