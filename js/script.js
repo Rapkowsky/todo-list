@@ -4,6 +4,14 @@ let addButton;
 let ulList;
 let newToDoElement;
 
+let popup;
+let popupInfo;
+let toDoEdit;
+let popupInput;
+let popupAddButton;
+let popupCancelutton;
+
+
 const main = () => {
 	prepareDomeElements();
 	prepareDomeEvents();
