@@ -198,4 +198,18 @@ li {
 	.todo-input {
 		width: 59%;
 	}
+	.popup h3 {
+		padding: 20px 0 0px;
+	}
+	.popup-body {
+		justify-content: center;
+		width: 90%;
+		padding: 10px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.popup-input {
+		width: 43%;
+		margin-bottom: 20px;
+	}
 }
